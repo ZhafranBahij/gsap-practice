@@ -79,3 +79,10 @@ gsap.to(".box-delay-1", {
     duration: 1,
     delay: 1 // delay the start of this animation
   });
+
+/**
+ * EASES
+ */
+gsap.to(".box-ease-not", { x: '100vw', duration: 2, ease: "none" });
+
+gsap.to(".box-ease", { x: '100vw', duration: 2, ease: "bounce.out" });
