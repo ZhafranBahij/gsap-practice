@@ -86,3 +86,41 @@ gsap.to(".box-delay-1", {
 gsap.to(".box-ease-not", { x: '100vw', duration: 2, ease: "none" });
 
 gsap.to(".box-ease", { x: '100vw', duration: 2, ease: "bounce.out" });
+
+/**
+ * STAGGER
+ * Assume stagger is turn based element. 
+ * First element start animate, but second element wait  until stagger duration clear.
+ */
+gsap.to('.box-stagger', {
+    x: 100,
+    stagger: 0.4 // 0.1 seconds between when each ".box" element starts animating
+});
+
+// Stagger with advanced options
+gsap.to('.box-stagger-advanced', {
+    x: 250,
+    stagger: {
+        // wrap advanced options in an object
+        each: 0.1,
+        from: 'center',
+        grid: 'auto',
+        ease: 'power2.inOut',
+        repeat: -1, // Repeats immediately, not waiting for the other staggered animations to finish,
+        yoyo: true // Alternates back and forth between the start and end values
+    }
+});
+
+// Stagger with advanced options repeat outside
+gsap.to('.box-stagger-advanced-2', {
+    x: 250,
+    repeat: -1, // Repeats immediately, not waiting for the other staggered animations to finish,
+    yoyo: true, // Alternates back and forth between the start and end values
+    stagger: {
+        // wrap advanced options in an object
+        each: 0.1,
+        from: 'center',
+        grid: 'auto',
+        ease: 'power2.inOut',
+    }
+});
