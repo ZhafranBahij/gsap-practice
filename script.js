@@ -160,3 +160,68 @@ tl3.to(".box-timeline-6", { x: 600 });
 tl3.to(".box-timeline-7", { x: 600 });
 // Example of delay in the timeline
 tl3.to(".box-timeline-8", { x: 600, delay: 0.5 });
+
+/**
+ * Control
+ */
+// store the tween or timeline in a variable
+let tween = gsap.to(".box-control", {duration: 8, x: "100vw"});
+
+//pause
+document.querySelector("#pause").addEventListener("click", () => {
+    //pause
+    tween.pause();
+});
+
+
+document.querySelector("#resume").addEventListener("click", () => {
+    // resume the tween
+    tween.resume();
+});
+
+document.querySelector("#reverse").addEventListener("click", () => {
+    //reverse (always goes back towards the beginning)
+    tween.reverse();
+});
+
+document.querySelector("#seek").addEventListener("click", () => {
+    //jump to exactly 0.5 seconds into the tween
+    tween.seek(0.5);
+});
+
+document.querySelector("#progress").addEventListener("click", () => {
+    //jump to exacty 1/4th into the tween 's progress:
+    tween.progress(0.25);
+});
+
+document.querySelector("#time-scale").addEventListener("click", () => {
+    
+    //make the tween go half-speed
+    // tween.timeScale(0.5);
+
+    //make the tween go double-speed
+    tween.timeScale(2);
+});
+
+document.querySelector("#kill").addEventListener("click", () => {
+    //immediately kill the tween and make it eligible for garbage collection
+    tween.kill();
+});
+
+document.querySelector("#restart").onclick = () => tween.restart();
+document.querySelector("#play").onclick = () => tween.play();
+
+// You can even chain control methods
+// Play the timeline at double speed - in reverse.
+// tween.timeScale(2).reverse();
+
+/**
+ * Callback
+ */
+gsap.to(".box-callback", {
+    x: 400,
+    duration: 2,
+    onStart: () => console.log("onStart"),
+    onUpdate: () => console.log("onUpdate"),
+    onComplete: () => console.log("onComplete"),
+})
