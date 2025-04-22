@@ -124,3 +124,39 @@ gsap.to('.box-stagger-advanced-2', {
         ease: 'power2.inOut',
     }
 });
+
+/**
+ * GSAP Timeline
+ */
+
+// create a timeline
+let tl = gsap.timeline()
+
+// add the tweens to the timeline - Note we're using tl.to not gsap.to
+tl.to(".box-timeline-1", { x: 600, duration: 1 });
+tl.to(".box-timeline-2", { x: 600, duration: 0.5 });
+tl.to(".box-timeline-3", { x: 600, duration: 0.5 });
+// Example of delay in the timeline
+tl.to(".box-timeline-4", { x: 600, duration: 0.5, delay: 0.5 });
+
+// Giving start time
+let tl2 = gsap.timeline()
+
+// add the tweens to the timeline - Note we're using tl.to not gsap.to
+tl2.to(".box-timeline-position-1", { x: 450, duration: 1 }, 1);
+tl2.to(".box-timeline-position-2", { x: 450, duration: 0.5 }, '+=0.5'); // 0.5 seconds after the previous animation
+tl2.to(".box-timeline-position-3", { x: 450, duration: 0.3 }, '<');
+tl2.to(".box-timeline-position-4", { x: 450, duration: 0.3 }, "-=50%");
+// tl.to(".box-timeline-position-4", { x: 600, duration: 0.5, delay: 0.5 });
+// Example of delay in the timeline
+
+// If you want to same duration in timeline, you can do this
+// create a timeline
+let tl3 = gsap.timeline({defaults: {duration: 0.5}});
+
+// add the tweens to the timeline - Note we're using tl3.to not gsap.to
+tl3.to(".box-timeline-5", { x: 600 });
+tl3.to(".box-timeline-6", { x: 600 });
+tl3.to(".box-timeline-7", { x: 600 });
+// Example of delay in the timeline
+tl3.to(".box-timeline-8", { x: 600, delay: 0.5 });
