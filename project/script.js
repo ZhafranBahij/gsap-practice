@@ -1,7 +1,7 @@
 let tl = gsap.timeline({});
 
 const A1_X_POSITION = "60vw";
-const A1_WEAPON_X_POSITION = "45vw";
+const A1_WEAPON_X_POSITION = "55vw";
 const A2_X_POSITION = "0vw";
 
 /**
@@ -61,7 +61,7 @@ tl.fromTo("#a2",
 // A1 throw a weapon
 tl.to("#a1-weapon", 
     {
-        x: "5vw",
+        x: "3vw",
         y: "95vh",
         ease: "power2.inOut",
         duration: 0.5,
