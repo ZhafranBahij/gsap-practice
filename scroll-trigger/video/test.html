@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+  margin: 0;
+}
+
+.sticky-wrapper {
+  height: 300vh; /* this defines how long the sticky effect lasts */
+  position: relative;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #333;
+  color: white;
+  padding: 1em;
+  z-index: 1000;
+}
+
+.content {
+  height: 300vh;
+  background: lightgray;
+}
+
+    </style>
+</head>
+<body>
+    <div class="sticky-wrapper">
+        <div class="navbar">Navbar</div>
+      </div>
+      <div class="content">
+        Rest of content here...
+      </div>
+      <script>
+        
+      </script>
+</body>
+</html>
