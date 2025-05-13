@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body >
+
+    <div id="smooth-wrapper" >
+        <div id="smooth-content" style="height: 500vh;">
+        <!--- ALL YOUR CONTENT HERE --->
+            <div data-speed="auto" class="bg-primary text-white" style="height: 100px; width: 100px;">box</div>
+            <!-- auto-calculated based on how far it can move inside its container -->
+            <div data-speed="0.5" class="bg-primary text-white" style="height: 100px; width: 100px;">box</div>
+            <!-- half-speed of scroll -->
+            <div data-speed="2" class="bg-primary text-white" style="height: 100px; width: 100px;">box</div>
+            <!-- double-speed of scroll -->
+            <div data-speed="1" class="bg-primary text-white" style="height: 100px; width: 100px;">box</div>
+            <!-- normal speed of scroll -->
+
+        </div>
+    </div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

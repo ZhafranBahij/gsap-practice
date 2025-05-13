@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Template</title>
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body >
+
+    <div id="smooth-wrapper">
+    <div id="smooth-content">
+        <header class="header">
+            <h1 class="title">ScrollSmoother</h1>
+            <button class="button">Jump to C</button>
+        </header>
+        <div class="box box-a gradient-green" data-speed="clamp(0.5)">a</div>
+        <div class="box box-b gradient-purple" data-speed="clamp(0.8)">b</div>
+        <div class="box box-c gradient-orange" data-speed="1.5">c</div>
+        <div class="line"></div>
+    </div>
+    </div>
+
+    <!-- GSAP Library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <!-- Script JS -->
+    <script src="./script.js"></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+</body>
+</html>
